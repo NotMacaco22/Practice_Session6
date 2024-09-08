@@ -1,34 +1,55 @@
 package models;
 
-/**
- * @author silva
- * @version 1.0
- * @created 07-Sep-2024 2:04:17 AM
- */
+import com.sun.jdi.ArrayReference;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Faculty {
 
-	private String building;
-	private int id;
-	private String name;
-	public Coordination m_Coordination;
+    private String building;
+    private int id;
+    private String facultyName;
+    private ArrayList<Coordination> coordinations;
 
-	public Faculty(){
+    public Faculty() {
+    }
 
-	}
+    public Faculty(String building, int id, String facultyName) {
+        this.building = building;
+        this.id = id;
+        this.facultyName = facultyName;
+        this.coordinations = new ArrayList<>();
+    }
 
-	public void finalize() throws Throwable {
+    public String getBuilding() {
+        return building;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getFacultyName() {
+        return facultyName;
+    }
 
-	}
-	/**
-	 * 
-	 * @param code
-	 * @param name
-	 */
-	public void addCoordination(int code, String name){
+    public void addCoordination(int code, String coordinationName){
+        Coordination coordination = new Coordination(code, coordinationName);
+        coordinations.add(coordination);
+    }
 
-	}
+    public ArrayList<Coordination> getCoordinations() {
+        return coordinations;
+    }
 
-	public ArrayList<Coordination> showListCoordination(){
-		return null;
-	}
-}//end Faculty
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "building='" + building + '\'' +
+                ", id=" + id +
+                ", facultyName='" + facultyName + '\'' +
+                ", coordinations=" + coordinations +
+                '}';
+    }
+}
+
+

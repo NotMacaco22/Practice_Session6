@@ -1,28 +1,32 @@
 package models;
 
-/**
- * @author silva
- * @version 1.0
- * @created 07-Sep-2024 2:04:16 AM
- */
 public class Coordination {
 
-	private int code;
-	private String name;
+    private int code;
+    private String coordinationName;
 
-	public Coordination(){
+    public Coordination() {
+    }
 
-	}
+    public Coordination(int code, String coordinationName) {
+        this.code = code;
+        this.coordinationName = coordinationName;
+    }
 
-	public void finalize() throws Throwable {
+    public int getCode() {
+        return code;
+    }
 
-	}
-	/**
-	 * 
-	 * @param code
-	 * @param name
-	 */
-	public void Coordination(int code, String name){
+    public String getCoordinationName() {
+        return coordinationName;
+    }
 
-	}
-}//end Coordination
+    @Override
+    public String toString() {
+        return "Coordination{" +
+                "code=" + code +
+                ", coordinationName='" + coordinationName + '\'' +
+                '}';
+    }
+}
+

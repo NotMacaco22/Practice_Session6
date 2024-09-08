@@ -1,33 +1,64 @@
 package models;
 
-/**
- * @author silva
- * @version 1.0
- * @created 07-Sep-2024 2:04:14 AM
- */
 public class Teacher {
 
-	private String degree;
-	private String firstName;
-	private String id;
-	private String lastName;
-	public Coordination m_Coordination;
+    private String lastName;
+    private String id;
+    private String firstName;
+    private String degree;
+    private Coordination coordination;
 
-	public Teacher(){
-	}
+    public Teacher() {
+    }
 
+    public Teacher(String lastName, String id, String firstName, String degree) {
+        this.lastName = lastName;
+        this.id = id;
+        this.firstName = firstName;
+        this.degree = degree;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getDegree() {
+        return degree;
+    }
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
 
+    public Coordination getCoordination() {
+        return coordination;
+    }
 
-	public Coordination getCoordination(){
-		return null;
-	}
+    public void setCoordination(Coordination coordination) {
+        this.coordination = coordination;
+    }
 
-	/**
-	 * 
-	 * @param Coordination
-	 */
-	public void setCoordination(Coordination Coordination){
-
-	}
-}//end Teacher
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "lastName='" + lastName + '\'' +
+                ", id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", degree='" + degree + '\'' +
+                ", coordination=" + coordination +
+                '}';
+    }
+}
