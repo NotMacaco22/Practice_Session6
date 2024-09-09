@@ -1,8 +1,5 @@
 package models;
 
-import com.sun.jdi.ArrayReference;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Faculty {
