@@ -1,6 +1,6 @@
-import models.Coordination;
-import models.Faculty;
-import models.Teacher;
+import university.Coordination;
+import university.Faculty;
+import university.Teacher;
 
 public class Main {
 

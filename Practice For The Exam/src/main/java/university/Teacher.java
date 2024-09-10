@@ -1,4 +1,4 @@
-package models;
+package university;
 
 public class Teacher {
 
